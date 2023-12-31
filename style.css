@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.7;
+    color: #053b50;
+}
+a {
+    text-decoration: none; /* <a>タグの傍線の指定 */
+}
+img {
+    max-width: 100%;
+}
+
+
+/* ヘッダー */
+.page-header {
+    display: flex; /* 横並びの指定 */
+    justify-content: space-between; /* 両端に設置する指定 */
+}
+.wrapper {
+    max-width: 1100px; /* 最大横幅の指定 */
+    margin: 0 auto; /* 中央に配置する指定 */
+    padding: 0 4%; /* スマホ向け余白の指定 */
+}
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: #e2e2e2;
+}
+.main-nav a:hover {
+    color: #e95413;
+}
+
+
+/* ホーム */
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+.page-title {
+    font-size: 5rem;
+    font-weight: normal;
+}
+
+/* 背景画像 */
+.big-bg {
+    background-size: cover; 
+    background-position: center top;
+}
+#home {
+    background-image: url(./images/mainvisual.png);
+    min-height: 100vh;
+}
+#home .page-title {
+    text-transform: none;
+}
+
+/* Works */
+.works-content .contents-title {
+    text-align: center;
+}
+/* 画像を横並びにする指定 */
+.top-banner{
+	display: flex;
+	flex-wrap:wrap;
+}
+.top-banner li {
+	width: calc(100%/3);/*←画像を横に4つ並べる場合*/
+	padding:0 5px;/*←画像の左右に5pxの余白を入れる場合*/
+	box-sizing:border-box;
+}
+.top-banner li img {
+	max-width:100%; /*画像のはみだしを防ぐ*/
+	height: auto; /*画像の縦横比を維持 */
+	border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+}
+ul {
+    list-style: none;
+  }
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 26px 0;
+}
+footer p {
+    color: #053b50;
+    font-size: 0.875rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+    .home-content {
+        margin-top: 20%;
+    }
+}
+
+
+/* ローディング */
+#loading {
+    transition: all 3s;
+    /*ローディングにかかる時間*/
+    background-color: #ffffff;
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .loading-text {
+    font-weight: bold;
+    text-align: center;
+  }
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+
+
+
+
+
